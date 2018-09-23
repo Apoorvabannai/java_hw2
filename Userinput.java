@@ -21,18 +21,17 @@ class Userinput
   public static void main(String[]args)
   {
     Scanner ip =new Scanner(System.in);
-    double price,quantity,subtotal;
-    System.out.println(" enter the price");
+    double price,quantity,subtotal, SalesTax_Amount, salestax_rate, total_amount;
+    System.out.println("Enter the price");
     price= ip.nextDouble();
-    System.out.println(" enter the quantity");
+    System.out.println("Enter the quantity");
     quantity= ip.nextDouble();
-    subtotal = price *quantity;
-    System.out.println(" the subtotal is:"+ subtotal);
-    double SalesTax_Amount, salestax_rate, total_amount;
+    subtotal = (price*quantity);
+    System.out.println("The subtotal is: " + subtotal);
     salestax_rate= 7.5;
     SalesTax_Amount= subtotal*(salestax_rate/100);
-    System.out.println("  the sales tax amount is:"+ SalesTax_Amount);
+    System.out.println("The sales tax amount is: " + SalesTax_Amount);
     total_amount= subtotal + SalesTax_Amount;
-    System.out.println(" the total amount is :"+ total_amount); 
+    System.out.println("The total amount is: " + total_amount); 
   }
 }
